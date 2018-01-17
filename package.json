@@ -1,8 +1,12 @@
 {
-    "name": "RPG Bot",
+    "name": "rpg-bot",
     "version": "1.0.0",
     "description": "Lets play a game",
     "main": "bot.js",
     "author": "James Johnson, Paul Mason",
-    "dependencies": {}
-  }
+    "dependencies": {
+        "discord.io": "github:woor/discord.io#gateway_v6",
+        "dotenv": "^4.0.0",
+        "winston": "^2.4.0"
+    }
+}
