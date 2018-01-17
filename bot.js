@@ -35,17 +35,40 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: 'Pong!'
                 });
-                case 'story':
+                break;
+            case 'story':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'There was once an old hermit named Jerome!'
+                    message: 'Paul is a little bitch'
                 });
-                case 'more':
+                break;
+            case 'more':
                 bot.sendMessage({
                     to: channelID,
-                    message: 'He was grouchy old man that died alone. The end!'
+                    message: 'He got hit and cried like a girl. the end.'
                 });
-            break;
+                break;
+            case 'tellmemore':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'But Jerome is still the wimpiest of them all.'
+                });
+                break;
+                case 'help':
+                    bot.sendMessage({
+                        to: channelID,
+                        message: 'new-char\ndisplay-chars\nstory'
+                    });
+                    break;
+              case 'new-char':
+                NewChar();
+                break;
+              default:
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Use help for commands'
+                });
+                break;
             // Just add any case commands if you want to..
          }
      }

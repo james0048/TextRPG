@@ -1,9 +1,11 @@
+
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
     prompt: 'Enter Command:'
 });
+var character = require('./Character');
 var input;
 var characterList = {};
 
@@ -12,10 +14,10 @@ rl.prompt();
 rl.on('line', (line) => {
   switch (line.trim()) {
     case 'help':
-      console.log('new character');
+      console.log('new-char');
       console.log('display');
       break;
-    case 'new character':
+    case 'new-char':
       NewChar();
       break;
     default:
@@ -33,5 +35,5 @@ function NewChar(){
     name = 'bob';
     race = 'elf';
     gender = 'boy';
-    characterList[characterList.length] = new Character(name, race, gender);
+    characterList[characterList.length] = new character(name, race, gender);
 }
