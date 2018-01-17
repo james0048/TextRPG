@@ -1,0 +1,8 @@
+{
+    "name": "RPG Bot",
+    "version": "1.0.0",
+    "description": "Lets play a game",
+    "main": "bot.js",
+    "author": "James Johnson, Paul Mason",
+    "dependencies": {}
+  }
