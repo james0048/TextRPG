@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 var character = require('./Character');
 var input;
-var characterList = {};
+var characterList = [];
 
 rl.prompt();
 
@@ -19,6 +19,9 @@ rl.on('line', (line) => {
       break;
     case 'new-char':
       NewChar();
+      break;
+    case 'display':
+      DisplayChar();
       break;
     default:
       console.log(`Say what? I might have heard '${line.trim()}', use help for commands`);
@@ -32,8 +35,27 @@ rl.on('line', (line) => {
 
 
 function NewChar(){
-    name = 'bob';
-    race = 'elf';
-    gender = 'boy';
-    characterList[characterList.length] = new character(name, race, gender);
+  
+  name = '';
+  race = '';
+  gender = '';
+
+  rl.question('What is the name? ', (answer) => {
+    rl.question('What is the race? ', (answer2) => {
+      rl.question('What is the gender? ', (answer3) =>{
+        name = answer;
+        race = answer2;
+        gender = answer3;
+        characterList.push(new character(name, race, gender));
+        rl.prompt();
+      });
+    });
+});
+  
+}
+
+function DisplayChar(){
+  for(i = 0; i < characterList.length; i++){
+    console.log(characterList[i]);
+  }
 }

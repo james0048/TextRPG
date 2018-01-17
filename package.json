@@ -6,6 +6,7 @@
     "author": "James Johnson, Paul Mason",
     "dependencies": {
         "discord.io": "github:woor/discord.io#gateway_v6",
+        "discord.js": "^11.3.0",
         "dotenv": "^4.0.0",
         "winston": "^2.4.0"
     }
