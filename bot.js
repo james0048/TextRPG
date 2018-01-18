@@ -29,16 +29,12 @@ client.on('message', async message => {
     const args = message.content.slice(auth.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    if(command === 'ping'){
-        //calculate latency
-        const m = await message.channel.send("Ping?");
-        m.edit(`Pong! Latency is, ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-    }
-
-    if(command === "say"){
-        const sayMessage = args.join(" ");
-        message.delete().catch(O_o=>{});
-        message.channel.send(sayMessage);
+    //try to open the script for the command
+    try{
+        let commandFile = require(`./commands/${command}.js`);
+        commandFile.run(client, message, args);
+    }catch(err){
+        console.error(err);
     }
 
     if(command === 'new-char'){
