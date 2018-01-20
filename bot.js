@@ -57,15 +57,7 @@ client.on('message', async message => {
 
 
 
-function NewChar(_name, _race, _gender){
-    
-    name = _name;
-    race = _race;
-    gender = _gender;
-  
-    characterList.push(new character(name, race, gender));
-    
-  }
+
   
   function DisplayChar(){
     for(i = 0; i < characterList.length; i++){
