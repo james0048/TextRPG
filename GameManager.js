@@ -11,9 +11,9 @@ exports.Display = () =>{
   returnArray = [];
   for(i = 0; i < characterList.length; i++){
     cl = characterList[i];
-    returnArray.push(`${cl.name} ${cl.race} ${cl.gender}`)
+    returnArray.push(`${cl.name} ${cl.race} ${cl.gender}`);
   }
-  return returnArray;
+  return characterList;
 }
 
 

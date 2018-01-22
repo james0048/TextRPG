@@ -3,39 +3,35 @@ function Character (_name, _race, _gender){
     this.race = _race;
     this.gender = _gender;
 
-    var level = 1;
-    var exp = 0;
-    var attributes = {};
-    InitAttributes(attributes);
-    var skills = {};
-    InitSkills(skills);
-    
-    
+    this.level = 1;
+    this.exp = 0;
+    this.attributes = new attributes();
+    this.skills = new skills(); 
 }
 
-function InitAttributes (_attributes){
-    _attributes.strength = 30;
-    _attributes.intelligence = 30;
-    _attributes.willpower = 30;
-    _attributes.endurance = 30;
-    _attributes.agility = 30;
-    _attributes.personality = 30;
-    _attributes.luck = 30;
-  }
+function attributes () {
+    this.strength = 30;
+    this.intelligence = 30;
+    this.willpower = 30;
+    this.endurance = 30;
+    this.agility = 30;
+    this.personality = 30;
+    this.luck = 30;
+}
 
-function InitSkills (_skills){
-    _skills.bluntWeapon = 30;
-    _skills.shortBlade = 30;
-    _skills.longBlade = 30;
-    _skills.ranged = 30;
-    _skills.throwing = 30;
-    _skills.alchemy = 30;
-    _skills. merchantile = 30;
-    _skills.persuasion = 30;
-    _skills.stealing = 30;
-    _skills.destruction = 30;
-    _skills.healing = 30;
-    _skills.alteration = 30;
+function skills (){
+    this.bluntWeapon = 30;
+    this.shortBlade = 30;
+    this.longBlade = 30;
+    this.ranged = 30;
+    this.throwing = 30;
+    this.alchemy = 30;
+    this.merchantile = 30;
+    this.persuasion = 30;
+    this.stealing = 30;
+    this.destruction = 30;
+    this.healing = 30;
+    this.alteration = 30;
 }
 
 module.exports = Character;
