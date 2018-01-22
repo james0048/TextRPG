@@ -5,8 +5,34 @@ function Character (_name, _race, _gender){
 
     this.level = 1;
     this.exp = 0;
+
     this.attributes = new attributes();
-    this.skills = new skills(); 
+    this.skills = new skills();
+    /*
+    //this.attributes = new Map();
+    this.attributes = { strength: 30,
+                        intelligence: 30,
+                        willpower: 30,
+                        endurance: 30,
+                        agility: 30,
+                        personality: 30,
+                        luck: 30
+                        };
+    //this.skills = new Map();
+    this.skills = { bluntWeapon: 30,
+                    shortBlade: 30,
+                    longBlade: 30,
+                    ranged: 30,
+                    throwing: 30,
+                    alchemy: 30,
+                    merchantile: 30,
+                    persuasion: 30,
+                    stealing: 30,
+                    destruction: 30,
+                    healing: 30,
+                    alteration: 30    
+                    };
+                    */
 }
 
 function attributes () {

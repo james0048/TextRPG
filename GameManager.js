@@ -2,6 +2,7 @@
 var character = require('./Character');
 var input;
 var characterList = [];
+var Map = require('./Map');
 
 exports.AddChar = (name, race, age) => {
   characterList.push(new character(name, race, age));
@@ -15,6 +16,12 @@ exports.Display = () =>{
   }
   return characterList;
 }
+
+exports.Map = () =>{
+  var map = new Map(20);
+  return map;
+}
+
 
 
 

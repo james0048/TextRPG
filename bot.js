@@ -37,19 +37,6 @@ client.on('message', async message => {
         console.error(err);
     }
 
-    if(command === 'new-char'){
-        let name = args[0];
-        let race = args[1];
-        let gender = args[2];
-        NewChar(name, race, gender);
-    }
-
-    if(command === 'display'){
-        for(i = 0; i < characterList.length; i++){
-            message.channel.send(characterList[i].name + ' ' + characterList[i].race + ' ' + characterList[i].gender);
-          }
-    }
-
     
 });
 
