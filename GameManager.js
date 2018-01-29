@@ -3,6 +3,7 @@ var character = require('./Character');
 var input;
 var characterList = [];
 var Map = require('./Map');
+var playerPos = [0,0]
 
 exports.AddChar = (name, race, age) => {
   characterList.push(new character(name, race, age));
@@ -20,6 +21,10 @@ exports.Display = () =>{
 exports.Map = () =>{
   var map = new Map(20);
   return map;
+}
+
+exports.PlayerPos = () =>{
+  return playerPos;
 }
 
 
